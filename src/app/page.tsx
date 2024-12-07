@@ -21,7 +21,7 @@ export default function ReceiptLandingPage() {
   }, [])
 
   return (
-    <div className="min-h-full bg-black flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div ref={receiptRef} className={`bg-yellow-50 shadow-lg max-w-md w-full  relative`}>
         {dimensions.width > 0 && dimensions.height > 0 && (
           <DrawingCanvas width={dimensions.width} height={dimensions.height} />
