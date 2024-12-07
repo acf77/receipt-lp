@@ -1,14 +1,10 @@
 "use client"
 
-import Image from 'next/image'
-import { Doto } from "next/font/google"
-import Link from 'next/link'
 import { useRef, useState, useEffect } from 'react'
-import DrawingCanvas from './drawing-canvas'
+import Image from 'next/image'
+import Link from 'next/link'
 
-const receiptFont = Doto({
-  subsets: ['latin'],
-})
+import DrawingCanvas from './drawing-canvas'
 
 export default function ReceiptLandingPage() {
 
@@ -26,7 +22,7 @@ export default function ReceiptLandingPage() {
 
   return (
     <div className="min-h-full bg-black flex items-center justify-center p-4">
-      <div ref={receiptRef} className={`bg-yellow-50 shadow-lg max-w-md w-full ${receiptFont.className} relative`}>
+      <div ref={receiptRef} className={`bg-yellow-50 shadow-lg max-w-md w-full  relative`}>
         {dimensions.width > 0 && dimensions.height > 0 && (
           <DrawingCanvas width={dimensions.width} height={dimensions.height} />
         )}
